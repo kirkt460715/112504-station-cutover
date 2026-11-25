@@ -1,0 +1,91 @@
+{
+  "basin": "south-run",
+  "coverage_window": {
+    "id": "storm-window",
+    "protected_elements": [
+      "rain",
+      "wind"
+    ]
+  },
+  "stations": [
+    {
+      "id": "old-a",
+      "elements": [
+        "rain",
+        "wind"
+      ],
+      "link": "east-uplink"
+    },
+    {
+      "id": "new-a",
+      "elements": [
+        "rain",
+        "wind"
+      ],
+      "link": "west-uplink"
+    },
+    {
+      "id": "back-b",
+      "elements": [
+        "rain"
+      ],
+      "link": "west-uplink"
+    }
+  ],
+  "works": [
+    {
+      "id": "install-2",
+      "from": "old-a",
+      "to": "new-a",
+      "elements": [
+        "rain",
+        "wind"
+      ]
+    },
+    {
+      "id": "works-3",
+      "station": "back-b",
+      "impacts": [
+        "west-uplink"
+      ]
+    }
+  ],
+  "crew_certificate": {
+    "id": "field-rain",
+    "station": "new-a",
+    "element": "rain",
+    "check": "calibration_recorded"
+  },
+  "formal_feeds": [
+    {
+      "basin": "south-run",
+      "element": "rain",
+      "station": "old-a"
+    },
+    {
+      "basin": "south-run",
+      "element": "wind",
+      "station": "old-a"
+    }
+  ],
+  "shifts": [
+    {
+      "id": "day",
+      "until": "2028-07-03T16:00:00+08:00"
+    },
+    {
+      "id": "evening",
+      "from": "2028-07-03T16:00:00+08:00"
+    }
+  ],
+  "field_revisions": [
+    {
+      "id": "rev-13",
+      "work": "works-3",
+      "reported_at": "2028-07-03T15:10:00+08:00",
+      "impacts": [
+        "west-uplink"
+      ]
+    }
+  ]
+}

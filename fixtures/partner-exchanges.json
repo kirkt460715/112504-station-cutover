@@ -1,0 +1,39 @@
+[
+  {
+    "operation": "platform-enable",
+    "request": {
+      "station": "new-a",
+      "element": "rain"
+    },
+    "reply": {
+      "ticket": "feed-12",
+      "state": "accepted"
+    },
+    "outcome": "commit_disconnect"
+  },
+  {
+    "operation": "platform-enable",
+    "request": {
+      "station": "new-a",
+      "element": "wind"
+    },
+    "reply": {
+      "ticket": "feed-13",
+      "state": "refused",
+      "reason": "missing_calibration"
+    },
+    "outcome": "success"
+  },
+  {
+    "operation": "site-disconnect",
+    "request": {
+      "station": "old-a",
+      "element": "rain"
+    },
+    "reply": {
+      "ticket": "field-18",
+      "state": "disconnected"
+    },
+    "outcome": "success"
+  }
+]
