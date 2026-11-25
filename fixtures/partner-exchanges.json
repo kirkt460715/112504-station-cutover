@@ -35,5 +35,17 @@
       "state": "disconnected"
     },
     "outcome": "success"
+  },
+  {
+    "operation": "platform-reading",
+    "request": {
+      "ticket": "feed-12",
+      "element": "rain"
+    },
+    "reply": {
+      "at": "2028-07-03T16:05:00+08:00",
+      "state": "readable"
+    },
+    "outcome": "success"
   }
 ]
